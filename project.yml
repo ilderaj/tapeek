@@ -30,6 +30,10 @@ targets:
     platform: macOS
     sources:
       - path: TapeekApp
+        excludes:
+          - Resources/Samples/**
+      - path: TapeekApp/Resources/Samples
+        buildPhase: resources
     dependencies:
       - target: TapeekPreview
         embed: true
