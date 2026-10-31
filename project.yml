@@ -8,6 +8,9 @@ options:
 packages:
   TapeekCore:
     path: Packages/TapeekCore
+  MarkdownUI:
+    url: https://github.com/gonzalezreal/swift-markdown-ui
+    exactVersion: 2.4.1
 
 settings:
   base:
@@ -57,6 +60,7 @@ targets:
         SKIP_INSTALL: YES
     dependencies:
       - package: TapeekCore
+      - package: MarkdownUI
     info:
       path: TapeekPreview/Info.plist
       properties:
