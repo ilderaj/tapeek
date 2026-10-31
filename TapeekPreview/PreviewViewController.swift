@@ -32,13 +32,7 @@ final class PreviewViewController: NSViewController, QLPreviewingController {
         case .markdown:
             return markdownContent(for: url)
         case .zip:
-            return AnyView(
-                Text("ZIP-TODO")
-                    .font(.title3)
-                    .foregroundStyle(.secondary)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color(nsColor: .textBackgroundColor))
-            )
+            return zipContent(for: url)
         case .unsupported:
             return AnyView(
                 Text("无法预览此文件类型")
@@ -62,6 +56,29 @@ final class PreviewViewController: NSViewController, QLPreviewingController {
             return AnyView(MarkdownFailureView(failure: failure, fileURL: url))
         } catch {
             return AnyView(MarkdownFailureView(failure: .unreadableFile, fileURL: url))
+        }
+    }
+
+    private func zipContent(for url: URL) -> AnyView {
+        do {
+            let listing = try ZipArchiveReader.list(url: url)
+
+            if listing.entries.isEmpty && listing.totalEntryCount == 0 {
+                return AnyView(ZipEmptyView())
+            }
+            if listing.entries.isEmpty && listing.skippedEntryCount > 0 {
+                return AnyView(ZipAllSkippedView())
+            }
+
+            let tree = ZipTree(
+                listing: listing,
+                archiveName: url.deletingPathExtension().lastPathComponent
+            )
+            return AnyView(ZipPreviewView(tree: tree, fileURL: url))
+        } catch let failure as PreviewFailure {
+            return AnyView(ZipFailureView(failure: failure, fileURL: url))
+        } catch {
+            return AnyView(ZipFailureView(failure: .archiveUnreadable, fileURL: url))
         }
     }
 }
