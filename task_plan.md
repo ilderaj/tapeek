@@ -6,27 +6,27 @@
 
 ## 下一步
 
-初始化 Git 基线，执行 T01：工程骨架、ad-hoc 签名、扩展注册与最小预览。
+提交 T01，然后并行推进 Markdown Core（T03/T04）与 ZIP Core（T06/T07）。
 
 ## 当前阶段
 
-阶段 1：工程骨架与 Quick Look 注册
+阶段 2：Markdown Core 与预览
 
 ## 各阶段
 
 ### 阶段 1：工程骨架与 Quick Look 注册
 - [x] 完成 PRD、实施计划、规格与 tickets。
-- [ ] 初始化 Git 并提交文档基线。
-- [ ] 实现 T01 宿主 App、预览扩展与最小 `TAPEEK-SMOKE` 预览。
-- [ ] 验证构建、ad-hoc 签名、`pluginkit` 注册与 `qlmanage` 调用。
-- **状态：** in_progress
+- [x] 初始化 Git 并提交文档基线。
+- [x] 实现 T01 宿主 App、预览扩展与最小 `TAPEEK-SMOKE` 预览。
+- [x] 验证构建、ad-hoc 签名、`pluginkit` 注册与 `qlmanage` 调用。
+- **状态：** complete
 
 ### 阶段 2：Markdown Core 与预览
 - [ ] T03 Core 基础类型与测试。
 - [ ] T04 Markdown 加载、编码、front matter 与测试。
 - [ ] T02 MarkdownUI 探针与图片/深色模式结论。
 - [ ] T05 正式 Markdown 预览 UI。
-- **状态：** pending
+- **状态：** in_progress
 
 ### 阶段 3：ZIP Core 与预览
 - [ ] T06 自写 central directory 读取器与夹具。

@@ -1,0 +1,83 @@
+name: Tapeek
+options:
+  bundleIdPrefix: com.local
+  deploymentTarget:
+    macOS: "27.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MACOSX_DEPLOYMENT_TARGET: "27.0"
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGN_IDENTITY: "-"
+    DEVELOPMENT_TEAM: ""
+    PROVISIONING_PROFILE_SPECIFIER: ""
+    ENABLE_HARDENED_RUNTIME: NO
+    MARKETING_VERSION: "0.1"
+    CURRENT_PROJECT_VERSION: "1"
+
+targets:
+  Tapeek:
+    type: application
+    platform: macOS
+    sources:
+      - path: TapeekApp
+    dependencies:
+      - target: TapeekPreview
+        embed: true
+        codeSign: true
+    info:
+      path: TapeekApp/Info.plist
+      properties:
+        CFBundleDisplayName: Tapeek
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSMinimumSystemVersion: "27.0"
+        LSApplicationCategoryType: public.app-category.utilities
+        NSPrincipalClass: NSApplication
+    entitlements:
+      path: TapeekApp/TapeekApp.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+
+  TapeekPreview:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: TapeekPreview
+    settings:
+      base:
+        APPLICATION_EXTENSION_API_ONLY: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.local.Tapeek.Preview
+        SKIP_INSTALL: YES
+    dependencies: []
+    info:
+      path: TapeekPreview/Info.plist
+      properties:
+        CFBundleDisplayName: Tapeek Preview
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSMinimumSystemVersion: "27.0"
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.quicklook.preview
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).PreviewViewController
+          NSExtensionAttributes:
+            QLSupportedContentTypes:
+              - net.daringfireball.markdown
+              - public.zip-archive
+            QLSupportsSearchableItems: false
+    entitlements:
+      path: TapeekPreview/TapeekPreview.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+
+schemes:
+  Tapeek:
+    build:
+      targets:
+        Tapeek: all
+    run:
+      config: Debug
+    archive:
+      config: Release
