@@ -5,6 +5,10 @@ options:
     macOS: "27.0"
   createIntermediateGroups: true
 
+packages:
+  TapeekCore:
+    path: Packages/TapeekCore
+
 settings:
   base:
     SWIFT_VERSION: "5.0"
@@ -51,7 +55,8 @@ targets:
         APPLICATION_EXTENSION_API_ONLY: YES
         PRODUCT_BUNDLE_IDENTIFIER: com.local.Tapeek.Preview
         SKIP_INSTALL: YES
-    dependencies: []
+    dependencies:
+      - package: TapeekCore
     info:
       path: TapeekPreview/Info.plist
       properties:
