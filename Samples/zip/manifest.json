@@ -1,0 +1,213 @@
+{
+  "chinese-gbk.zip": {
+    "entryCount": 1,
+    "fileCount": 1,
+    "directoryCount": 0,
+    "totalUncompressedBytes": 0,
+    "hasEncryptedEntries": false,
+    "zip64": false,
+    "names": [
+      "╓╨╬─.txt"
+    ]
+  },
+  "chinese-utf8.zip": {
+    "entryCount": 1,
+    "fileCount": 1,
+    "directoryCount": 0,
+    "totalUncompressedBytes": 5,
+    "hasEncryptedEntries": false,
+    "zip64": false,
+    "names": [
+      "你好/文件.txt"
+    ]
+  },
+  "corrupt.zip": {
+    "corrupt": true
+  },
+  "duplicates.zip": {
+    "entryCount": 2,
+    "fileCount": 2,
+    "directoryCount": 0,
+    "totalUncompressedBytes": 11,
+    "hasEncryptedEntries": false,
+    "zip64": false,
+    "names": [
+      "same.txt",
+      "same.txt"
+    ]
+  },
+  "empty-dirs.zip": {
+    "entryCount": 2,
+    "fileCount": 0,
+    "directoryCount": 2,
+    "totalUncompressedBytes": 0,
+    "hasEncryptedEntries": false,
+    "zip64": false,
+    "names": [
+      "empty/",
+      "nested/empty/"
+    ]
+  },
+  "empty.zip": {
+    "entryCount": 0,
+    "fileCount": 0,
+    "directoryCount": 0,
+    "totalUncompressedBytes": 0,
+    "hasEncryptedEntries": false,
+    "zip64": false,
+    "names": []
+  },
+  "encrypted.zip": {
+    "entryCount": 1,
+    "fileCount": 1,
+    "directoryCount": 0,
+    "totalUncompressedBytes": 6,
+    "hasEncryptedEntries": true,
+    "zip64": false,
+    "names": [
+      "secret.txt"
+    ]
+  },
+  "flat.zip": {
+    "entryCount": 5,
+    "fileCount": 5,
+    "directoryCount": 0,
+    "totalUncompressedBytes": 5,
+    "hasEncryptedEntries": false,
+    "zip64": false,
+    "names": [
+      "file-00.txt",
+      "file-01.txt",
+      "file-02.txt",
+      "file-03.txt",
+      "file-04.txt"
+    ]
+  },
+  "long-names.zip": {
+    "entryCount": 1,
+    "fileCount": 1,
+    "directoryCount": 0,
+    "totalUncompressedBytes": 0,
+    "hasEncryptedEntries": false,
+    "zip64": false,
+    "names": [
+      "nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn.txt"
+    ]
+  },
+  "macos-noise.zip": {
+    "entryCount": 3,
+    "fileCount": 2,
+    "directoryCount": 1,
+    "totalUncompressedBytes": 0,
+    "hasEncryptedEntries": false,
+    "zip64": false,
+    "names": [
+      ".DS_Store",
+      "__MACOSX/",
+      "__MACOSX/._readme.md"
+    ]
+  },
+  "missing-dirs.zip": {
+    "entryCount": 1,
+    "fileCount": 1,
+    "directoryCount": 0,
+    "totalUncompressedBytes": 1,
+    "hasEncryptedEntries": false,
+    "zip64": false,
+    "names": [
+      "a/b/c.txt"
+    ]
+  },
+  "sfx.zip": {
+    "entryCount": 5,
+    "fileCount": 3,
+    "directoryCount": 2,
+    "totalUncompressedBytes": 25,
+    "hasEncryptedEntries": false,
+    "zip64": false,
+    "names": [
+      "docs/",
+      "docs/readme.txt",
+      "src/main.swift",
+      "中文.txt",
+      "空目录/"
+    ]
+  },
+  "single-root.zip": {
+    "entryCount": 2,
+    "fileCount": 2,
+    "directoryCount": 0,
+    "totalUncompressedBytes": 0,
+    "hasEncryptedEntries": false,
+    "zip64": false,
+    "names": [
+      "Project/README.md",
+      "Project/docs/a.md"
+    ]
+  },
+  "sort.zip": {
+    "entryCount": 4,
+    "fileCount": 2,
+    "directoryCount": 2,
+    "totalUncompressedBytes": 0,
+    "hasEncryptedEntries": false,
+    "zip64": false,
+    "names": [
+      "a.txt",
+      "a/",
+      "b/",
+      "z.txt"
+    ]
+  },
+  "symlink.zip": {
+    "entryCount": 1,
+    "fileCount": 0,
+    "directoryCount": 0,
+    "totalUncompressedBytes": 6,
+    "hasEncryptedEntries": false,
+    "zip64": false,
+    "names": [
+      "link"
+    ]
+  },
+  "typical.zip": {
+    "entryCount": 5,
+    "fileCount": 3,
+    "directoryCount": 2,
+    "totalUncompressedBytes": 25,
+    "hasEncryptedEntries": false,
+    "zip64": false,
+    "names": [
+      "docs/",
+      "docs/readme.txt",
+      "src/main.swift",
+      "中文.txt",
+      "空目录/"
+    ]
+  },
+  "unsafe-paths.zip": {
+    "entryCount": 4,
+    "fileCount": 4,
+    "directoryCount": 0,
+    "totalUncompressedBytes": 2,
+    "hasEncryptedEntries": false,
+    "zip64": false,
+    "names": [
+      "../evil.txt",
+      "/abs.txt",
+      "a/../../b.txt",
+      "safe.txt"
+    ]
+  },
+  "zip64-entry.zip": {
+    "entryCount": 1,
+    "fileCount": 1,
+    "directoryCount": 0,
+    "totalUncompressedBytes": 5,
+    "hasEncryptedEntries": false,
+    "zip64": true,
+    "names": [
+      "zip64.txt"
+    ]
+  }
+}
