@@ -77,3 +77,12 @@ Tapeek 已能作为本机 Quick Look 扩展运行：Markdown 以格式化文档�
 - 安装：`./scripts/install-local.sh`
 - 卸载：`./scripts/uninstall-local.sh`
 - 文档：`README.md`、`docs/PRD.md`、`docs/impl-plan.md`、`docs/specs/`、`docs/tickets/`
+
+## 发布
+
+- GitHub 仓库：<https://github.com/ilderaj/tapeek>（Public）
+- Release：<https://github.com/ilderaj/tapeek/releases/tag/v0.1.0>
+- 安装包：`Tapeek-0.1.0.zip`（1,847,179 字节）
+- SHA-256：`14d635e6ca7246ad2064f64483fb8d9711a47c017506550ea318e9aec6065116`
+- App 版本：0.1.0；ad-hoc 签名，未公证。
+- App 图标：`TapeekApp/Assets.xcassets/AppIcon.appiconset`，设计说明见 `docs/design/app-icon.md`。

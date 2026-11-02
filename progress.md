@@ -41,3 +41,10 @@
 
 ### 环境问题
 - 三次“Linux 环境”报告是 remote-magpie VPS 注入的环境说明；实际工具始终在 Mac 执行。详见 `FINAL.md` 和 `findings.md`。
+
+## 发布记录（2026-11-02）
+
+- GitHub 公开仓库：<https://github.com/ilderaj/tapeek>
+- Release v0.1.0：<https://github.com/ilderaj/tapeek/releases/tag/v0.1.0>
+- 资产：`Tapeek-0.1.0.zip`，1,847,179 字节。
+- 图标：自定义 macOS 风格 AppIcon，已集成并通过 Release 构建。
