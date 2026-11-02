@@ -1,5 +1,7 @@
 # Tapeek
 
+![Tapeek icon](docs/assets/tapeek-icon.png)
+
 Tapeek 是一个 macOS Quick Look 预览增强工具：在 Finder 中选中 Markdown 或 ZIP 文件，按空格即可阅读排版后的文档或浏览压缩包目录，不需要打开编辑器或先解压。
 
 当前状态：**MVP 已实现并安装在本机**。Finder 空格和宿主 App 两个按钮已手动确认；VoiceOver/窄窗口留待后续自动化。详细结论见 [FINAL.md](docs/verification/FINAL.md)。
