@@ -1,7 +1,13 @@
 import AppKit
+import os
 import QuickLookUI
 import SwiftUI
 import TapeekCore
+
+private let logger = Logger(
+    subsystem: "com.local.Tapeek.Preview",
+    category: "preview"
+)
 
 final class PreviewViewController: NSViewController, QLPreviewingController {
     private var hostingView: NSView?
@@ -14,33 +20,34 @@ final class PreviewViewController: NSViewController, QLPreviewingController {
         at url: URL,
         completionHandler handler: @escaping (Error?) -> Void
     ) {
+        let started = Date()
         hostingView?.removeFromSuperview()
 
+        let kind = PreviewKindResolver.resolve(fileURL: url)
         let host = NSHostingView(
-            rootView: content(for: url)
+            rootView: content(for: url, kind: kind)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         )
         host.frame = view.bounds
         host.autoresizingMask = [.width, .height]
         view.addSubview(host)
         hostingView = host
+
+        let duration = Int(Date().timeIntervalSince(started) * 1_000)
+        logger.info(
+            "preview kind=\(String(describing: kind), privacy: .public) duration_ms=\(duration, privacy: .public) result=success"
+        )
         handler(nil)
     }
 
-    private func content(for url: URL) -> AnyView {
-        switch PreviewKindResolver.resolve(fileURL: url) {
+    private func content(for url: URL, kind: PreviewKind) -> AnyView {
+        switch kind {
         case .markdown:
             return markdownContent(for: url)
         case .zip:
             return zipContent(for: url)
         case .unsupported:
-            return AnyView(
-                Text("无法预览此文件类型")
-                    .font(.title3)
-                    .foregroundStyle(.secondary)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color(nsColor: .textBackgroundColor))
-            )
+            return AnyView(UnsupportedPreviewView())
         }
     }
 
@@ -80,5 +87,23 @@ final class PreviewViewController: NSViewController, QLPreviewingController {
         } catch {
             return AnyView(ZipFailureView(failure: .archiveUnreadable, fileURL: url))
         }
+    }
+}
+
+private struct UnsupportedPreviewView: View {
+    var body: some View {
+        VStack(spacing: 10) {
+            Image(systemName: "doc.questionmark")
+                .font(.system(size: 28))
+                .foregroundStyle(.secondary)
+            Text("无法预览此文件类型")
+                .font(.title3.bold())
+            Text("Tapeek 首版只支持 Markdown（.md、.markdown）和 ZIP（.zip）。")
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(32)
+        .background(Color(nsColor: .textBackgroundColor))
     }
 }

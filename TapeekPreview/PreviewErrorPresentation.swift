@@ -18,8 +18,8 @@ struct PreviewErrorPresentation {
             symbolName = "textformat.abc"
         case let .fileTooLarge(actualBytes, limitBytes):
             title = "文档过大"
-            let actual = ByteCountFormatter.string(fromByteCount: Int64(actualBytes), countStyle: .file)
-            let limit = ByteCountFormatter.string(fromByteCount: Int64(limitBytes), countStyle: .file)
+            let actual = ByteFormat.string(UInt64(max(0, actualBytes)))
+            let limit = ByteFormat.string(UInt64(max(0, limitBytes)))
             detail = "文件为 \(actual)，超过 \(limit) 的预览上限。"
             symbolName = "doc.questionmark"
         case .archiveUnreadable:

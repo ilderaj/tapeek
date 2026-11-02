@@ -1,0 +1,3 @@
+Tapeek preview logs (captured with /usr/bin/log show)
+2026-11-02 12:59:43.121 I  TapeekPreview[28935:5af0127] [com.local.Tapeek.Preview:preview] preview kind=zip duration_ms=2 result=success
+2026-11-02 13:05:56.089 I  TapeekPreview[29327:5af1445] [com.local.Tapeek.Preview:preview] preview kind=markdown duration_ms=3 result=success
