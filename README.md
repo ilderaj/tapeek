@@ -12,6 +12,25 @@ Tapeek 是一个 macOS Quick Look 预览增强工具：在 Finder 中选中 Mark
 - ZIP：不解压查看目录树、文件大小、摘要、加密标记、空包/损坏/截断状态、中文文件名和 ZIP64。
 - 本地处理：不联网、不写用户目录、不产生解压产物。
 
+## 预览
+
+![Markdown preview](docs/verification/T02-01-gfm-dark.png)
+
+![ZIP preview](docs/verification/T08-01-typical.png)
+
+## 下载
+
+[Latest release](https://github.com/ilderaj/tapeek/releases/latest) 提供 `Tapeek-0.1.0.zip`，适用于 macOS 27 arm64。
+
+```sh
+unzip Tapeek-0.1.0.zip
+mv Tapeek.app ~/Applications/
+xattr -dr com.apple.quarantine ~/Applications/Tapeek.app
+open ~/Applications/Tapeek.app
+```
+
+Release 包使用 ad-hoc 签名，未经过 Apple 公证。首次打开若被 Gatekeeper 拦截，可右键选择「打开」，或执行上面的 `xattr` 命令。
+
 ## 安装与启用
 
 ```sh
