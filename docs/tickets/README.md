@@ -55,9 +55,9 @@ T01 骨架与最小预览
 | [T07](T07-zip-tree.md) | ZIP 树与行投影 | T06 | `ZipTree`、摘要、展开行 | 完成 |
 | [T08](T08-zip-preview-ui.md) | ZIP 预览 UI | T07、T02 | 目录树视图 | 完成 |
 | [T09](T09-routing-lifecycle.md) | 路由、生命周期与错误整合 | T05、T08 | 统一预览入口 | 完成 |
-| [T10](T10-host-app.md) | 宿主 App 单页说明 | T01 | 启用说明与示例入口 | 部分通过 |
+| [T10](T10-host-app.md) | 宿主 App 单页说明 | T01 | 启用说明与示例入口 | 完成 |
 | [T11](T11-fixtures-and-performance.md) | 夹具补齐与性能基准 | T04、T07 | 全量夹具、`TapeekBench` | 完成 |
-| [T12](T12-install-and-e2e.md) | 安装脚本与端到端验收 | T09、T10、T11 | 安装/卸载脚本、验收记录 | 部分通过 |
+| [T12](T12-install-and-e2e.md) | 安装脚本与端到端验收 | T09、T10、T11 | 安装/卸载脚本、验收记录 | 完成 |
 | [T13](T13-final-acceptance.md) | 最终验收与交付 | T12 | `FINAL.md`、已知限制 | 完成 |
 
 ## 5. 每个 Ticket 的结构

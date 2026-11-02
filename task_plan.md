@@ -80,4 +80,4 @@ MVP 已完成并安装。剩余动作是用户在 Finder 中手动确认空格�
 
 ## 备注
 
-MVP 功能完成；T10/T12 的宿主按钮、Finder 空格和 VoiceOver 仍待用户手动确认，已在 `FINAL.md` 中列为部分通过。
+MVP 功能与交互完成；用户已手动确认 Finder 空格和宿主按钮。VoiceOver/窄窗口按用户要求留待后续自动化，已记录在 `FINAL.md`。
