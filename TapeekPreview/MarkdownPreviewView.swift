@@ -7,6 +7,7 @@ struct MarkdownPreviewView: View {
     let document: MarkdownDocument
     let fileURL: URL
     private let altIndex: ImageAltIndex
+    private let chunks: [String]
 
     init(document: MarkdownDocument, fileURL: URL) {
         self.document = document
@@ -15,6 +16,7 @@ struct MarkdownPreviewView: View {
             markdown: document.body,
             baseURL: document.baseURL
         )
+        self.chunks = MarkdownChunker.chunks(document.body)
     }
 
     var body: some View {
@@ -28,16 +30,22 @@ struct MarkdownPreviewView: View {
                     Text("正文为空")
                         .foregroundStyle(.secondary)
                 } else {
-                    Markdown(
-                        document.body,
-                        baseURL: document.baseURL,
-                        imageBaseURL: document.baseURL
-                    )
-                    .markdownImageProvider(
-                        LocalImageProvider(altIndex: altIndex)
-                    )
-                    .tapeekMarkdownStyle()
-                    .textSelection(.enabled)
+                    LazyVStack(alignment: .leading, spacing: 0) {
+                        ForEach(Array(chunks.enumerated()), id: \.offset) { index, chunk in
+                            Markdown(
+                                chunk,
+                                baseURL: document.baseURL,
+                                imageBaseURL: document.baseURL
+                            )
+                            .markdownImageProvider(
+                                LocalImageProvider(altIndex: altIndex)
+                            )
+                            .tapeekMarkdownStyle()
+                            .textSelection(.enabled)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.bottom, index == chunks.count - 1 ? 0 : 8)
+                        }
+                    }
                 }
             }
             .padding(.horizontal, 24)
