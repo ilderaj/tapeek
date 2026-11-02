@@ -11,6 +11,10 @@ let package = Package(
     ],
     targets: [
         .target(name: "TapeekCore"),
+        .executableTarget(
+            name: "TapeekBench",
+            dependencies: ["TapeekCore"]
+        ),
         .testTarget(
             name: "TapeekCoreTests",
             dependencies: ["TapeekCore"]
