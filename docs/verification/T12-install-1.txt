@@ -1,0 +1,39 @@
+--prepared:/Users/jared/Personal Projects/Tapeek/.build/DerivedData/Build/Products/Debug/Tapeek.app/Contents/MacOS/__preview.dylib
+--validated:/Users/jared/Personal Projects/Tapeek/.build/DerivedData/Build/Products/Debug/Tapeek.app/Contents/MacOS/__preview.dylib
+--prepared:/Users/jared/Personal Projects/Tapeek/.build/DerivedData/Build/Products/Debug/Tapeek.app/Contents/PlugIns/TapeekPreview.appex
+--prepared:/Users/jared/Personal Projects/Tapeek/.build/DerivedData/Build/Products/Debug/Tapeek.app/Contents/MacOS/Tapeek.debug.dylib
+--validated:/Users/jared/Personal Projects/Tapeek/.build/DerivedData/Build/Products/Debug/Tapeek.app/Contents/MacOS/Tapeek.debug.dylib
+--prepared:/Users/jared/Personal Projects/Tapeek/.build/DerivedData/Build/Products/Debug/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/__preview.dylib
+--validated:/Users/jared/Personal Projects/Tapeek/.build/DerivedData/Build/Products/Debug/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/__preview.dylib
+--prepared:/Users/jared/Personal Projects/Tapeek/.build/DerivedData/Build/Products/Debug/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/TapeekPreview.debug.dylib
+--validated:/Users/jared/Personal Projects/Tapeek/.build/DerivedData/Build/Products/Debug/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/TapeekPreview.debug.dylib
+--validated:/Users/jared/Personal Projects/Tapeek/.build/DerivedData/Build/Products/Debug/Tapeek.app/Contents/PlugIns/TapeekPreview.appex
+/Users/jared/Personal Projects/Tapeek/.build/DerivedData/Build/Products/Debug/Tapeek.app: valid on disk
+/Users/jared/Personal Projects/Tapeek/.build/DerivedData/Build/Products/Debug/Tapeek.app: satisfies its Designated Requirement
+--prepared:/Users/jared/Applications/Tapeek.app/Contents/MacOS/__preview.dylib
+--validated:/Users/jared/Applications/Tapeek.app/Contents/MacOS/__preview.dylib
+--prepared:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex
+--prepared:/Users/jared/Applications/Tapeek.app/Contents/MacOS/Tapeek.debug.dylib
+--validated:/Users/jared/Applications/Tapeek.app/Contents/MacOS/Tapeek.debug.dylib
+--prepared:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/__preview.dylib
+--validated:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/__preview.dylib
+--prepared:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/TapeekPreview.debug.dylib
+--validated:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/TapeekPreview.debug.dylib
+--validated:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex
+/Users/jared/Applications/Tapeek.app: valid on disk
+/Users/jared/Applications/Tapeek.app: satisfies its Designated Requirement
+--prepared:/Users/jared/Applications/Tapeek.app/Contents/MacOS/__preview.dylib
+--validated:/Users/jared/Applications/Tapeek.app/Contents/MacOS/__preview.dylib
+--prepared:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex
+--prepared:/Users/jared/Applications/Tapeek.app/Contents/MacOS/Tapeek.debug.dylib
+--validated:/Users/jared/Applications/Tapeek.app/Contents/MacOS/Tapeek.debug.dylib
+--prepared:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/__preview.dylib
+--validated:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/__preview.dylib
+--prepared:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/TapeekPreview.debug.dylib
+--validated:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/TapeekPreview.debug.dylib
+--validated:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex
+/Users/jared/Applications/Tapeek.app: valid on disk
+/Users/jared/Applications/Tapeek.app: satisfies its Designated Requirement
+qlmanage: resetting quicklookd
+Installed: /Users/jared/Applications/Tapeek.app
+Next: pluginkit -m -p com.apple.quicklook.preview | grep -F com.local.Tapeek.Preview

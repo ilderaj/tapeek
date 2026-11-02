@@ -1,0 +1,14 @@
+--prepared:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex
+--prepared:/Users/jared/Applications/Tapeek.app/Contents/MacOS/__preview.dylib
+--validated:/Users/jared/Applications/Tapeek.app/Contents/MacOS/__preview.dylib
+--prepared:/Users/jared/Applications/Tapeek.app/Contents/MacOS/Tapeek.debug.dylib
+--validated:/Users/jared/Applications/Tapeek.app/Contents/MacOS/Tapeek.debug.dylib
+--prepared:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/__preview.dylib
+--validated:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/__preview.dylib
+--prepared:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/TapeekPreview.debug.dylib
+--validated:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex/Contents/MacOS/TapeekPreview.debug.dylib
+--validated:/Users/jared/Applications/Tapeek.app/Contents/PlugIns/TapeekPreview.appex
+/Users/jared/Applications/Tapeek.app: valid on disk
+/Users/jared/Applications/Tapeek.app: satisfies its Designated Requirement
+qlmanage: resetting quicklookd
+Uninstalled Tapeek from /Users/jared/Applications/Tapeek.app. Extension selection state was left unchanged.

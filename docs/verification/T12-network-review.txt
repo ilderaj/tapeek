@@ -1,0 +1,3 @@
+Network/WebView scan (Swift sources):
+Packages/TapeekCore/Tests/TapeekCoreTests/ImageAltIndexTests.swift:9:        ![remote](https://example.com/x.png)
+Packages/TapeekCore/Tests/TapeekCoreTests/ImageAltIndexTests.swift:18:            index.alt(for: URL(string: "https://example.com/x.png")!),

@@ -1,0 +1,4 @@
+Release build and package sizes
+** BUILD SUCCEEDED **
+2.9M	.build/DerivedDataRelease/Build/Products/Release/Tapeek.app
+2.7M	.build/DerivedDataRelease/Build/Products/Release/Tapeek.app/Contents/PlugIns/TapeekPreview.appex
