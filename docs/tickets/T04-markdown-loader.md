@@ -3,7 +3,7 @@
 | 项 | 内容 |
 | --- | --- |
 | ID | T04 |
-| 状态 | 待开始 |
+| 状态 | 完成 |
 | 依赖 | T03 |
 | 执行角色 | executor |
 | 预计产物 | `MarkdownLoader`、`FrontMatter`、解码与限额测试 |

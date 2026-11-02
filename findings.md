@@ -61,3 +61,12 @@
 - [Apple 论坛 116359：WKWebView 与 network.client](https://developer.apple.com/forums/thread/116359)
 - [TN3127: Inside Code Signing Requirements](https://developer.apple.com/documentation/technotes/tn3127-inside-code-signing-requirements)
 - [macOS 27 Release Notes](https://developer.apple.com/documentation/macos-release-notes/macos-27-release-notes)
+
+## 实施发现（2026-11-02）
+
+- **环境误报根因**：会话的 `group/thinker` 路由命中 remote-magpie 的 VPS Claude Code；该进程注入 Linux、`/tmp/magpie-claude-work-65532`、uid 65532 的环境说明，但 Bash 工具仍转回 Mac 执行。实际工具始终返回 `/Users/jared/Personal Projects/Tapeek`、Darwin、uid 501。后续先在同一执行上下文运行 `pwd; uname -s; id -u`，不凭摘要判断。
+- **Markdown 500 KB 性能**：MarkdownUI 一次性布局全部 2040 个段落时，扩展 CPU 接近 100%、RSS 约 900 MB、12 秒无内容。`MarkdownChunker` 按标题/空行分块（不切代码围栏）+ `LazyVStack` 后，首窗口 913 ms、RSS 约 132 MB。Core 解析仅 0.66 ms。
+- **ZIP 大样本**：25,000 条与 70,000 条 ZIP64 均只显示前 20,000 条，提示总数；`preparePreviewOfFile` 385–400 ms，RSS 约 81–82 MB。
+- **安装注册**：`pluginkit` 可能保留 DerivedData 构建产物的注册，导致扩展路径指向 `.build`。安装脚本现在先移除旧构建注册，再注册 `~/Applications/Tapeek.app`。
+- **日志不可见**：zsh 的 `log` 是内建函数，必须用 `/usr/bin/log`。日志格式：`preview kind=markdown duration_ms=3 result=success`。
+- **包体**：Release App 2.9 MB，扩展 2.7 MB。

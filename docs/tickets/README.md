@@ -46,19 +46,19 @@ T01 骨架与最小预览
 
 | ID | 标题 | 依赖 | 主要产物 | 状态 |
 | --- | --- | --- | --- | --- |
-| [T01](T01-scaffold-and-smoke.md) | 骨架、签名与最小预览 | 无 | 可注册的宿主 App 与扩展 | 待开始 |
-| [T02](T02-markdownui-spike.md) | MarkdownUI 与图片探针 | T01 | 渲染结论、浅色/深色截图 | 待开始 |
-| [T03](T03-core-foundation.md) | Core 基础类型 | T01 | `TapeekCore`、限制、错误、字节读取 | 待开始 |
-| [T04](T04-markdown-loader.md) | Markdown 加载与前置元数据 | T03 | `MarkdownLoader`、`FrontMatter`、测试 | 待开始 |
-| [T05](T05-markdown-preview-ui.md) | Markdown 预览 UI | T02、T04 | 正式 Markdown 视图 | 待开始 |
-| [T06](T06-zip-reader.md) | ZIP central directory 读取 | T03 | `ZipArchiveReader`、ZIP 夹具 | 待开始 |
-| [T07](T07-zip-tree.md) | ZIP 树与行投影 | T06 | `ZipTree`、摘要、展开行 | 待开始 |
-| [T08](T08-zip-preview-ui.md) | ZIP 预览 UI | T07、T02 | 目录树视图 | 待开始 |
-| [T09](T09-routing-lifecycle.md) | 路由、生命周期与错误整合 | T05、T08 | 统一预览入口 | 待开始 |
-| [T10](T10-host-app.md) | 宿主 App 单页说明 | T01 | 启用说明与示例入口 | 待开始 |
-| [T11](T11-fixtures-and-performance.md) | 夹具补齐与性能基准 | T04、T07 | 全量夹具、`TapeekBench` | 待开始 |
-| [T12](T12-install-and-e2e.md) | 安装脚本与端到端验收 | T09、T10、T11 | 安装/卸载脚本、验收记录 | 待开始 |
-| [T13](T13-final-acceptance.md) | 最终验收与交付 | T12 | `FINAL.md`、已知限制 | 待开始 |
+| [T01](T01-scaffold-and-smoke.md) | 骨架、签名与最小预览 | 无 | 可注册的宿主 App 与扩展 | 完成 |
+| [T02](T02-markdownui-spike.md) | MarkdownUI 与图片探针 | T01 | 渲染结论、浅色/深色截图 | 完成 |
+| [T03](T03-core-foundation.md) | Core 基础类型 | T01 | `TapeekCore`、限制、错误、字节读取 | 完成 |
+| [T04](T04-markdown-loader.md) | Markdown 加载与前置元数据 | T03 | `MarkdownLoader`、`FrontMatter`、测试 | 完成 |
+| [T05](T05-markdown-preview-ui.md) | Markdown 预览 UI | T02、T04 | 正式 Markdown 视图 | 完成 |
+| [T06](T06-zip-reader.md) | ZIP central directory 读取 | T03 | `ZipArchiveReader`、ZIP 夹具 | 完成 |
+| [T07](T07-zip-tree.md) | ZIP 树与行投影 | T06 | `ZipTree`、摘要、展开行 | 完成 |
+| [T08](T08-zip-preview-ui.md) | ZIP 预览 UI | T07、T02 | 目录树视图 | 完成 |
+| [T09](T09-routing-lifecycle.md) | 路由、生命周期与错误整合 | T05、T08 | 统一预览入口 | 完成 |
+| [T10](T10-host-app.md) | 宿主 App 单页说明 | T01 | 启用说明与示例入口 | 部分通过 |
+| [T11](T11-fixtures-and-performance.md) | 夹具补齐与性能基准 | T04、T07 | 全量夹具、`TapeekBench` | 完成 |
+| [T12](T12-install-and-e2e.md) | 安装脚本与端到端验收 | T09、T10、T11 | 安装/卸载脚本、验收记录 | 部分通过 |
+| [T13](T13-final-acceptance.md) | 最终验收与交付 | T12 | `FINAL.md`、已知限制 | 完成 |
 
 ## 5. 每个 Ticket 的结构
 

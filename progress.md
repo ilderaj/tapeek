@@ -1,39 +1,43 @@
 # 进度日志
 
-## 会话：2026-10-31
+## 会话：2026-11-02
 
 ### 当前状态
-- **阶段：** 5 - 交付。
-- **交付范围：** 仅文档，未生成工程、未编译、未安装扩展。
+- **阶段：** 6 - 最终验收与交付（完成）。
+- **MVP：** 已实现、已安装；功能验收通过，交互项部分通过。
 
 ### 已执行操作
-- 加载文件规划与中文技术写作规范。
-- 确认用户约束：Markdown 用于 README/技术笔记；第一版自用；支持当前 macOS；忽略 vMark。
-- 检查空目录、macOS 27.0 arm64、Xcode 27.0、Swift 6.4、XcodeGen 2.45.3。
-- 核查 Quick Look 扩展、同目录图片沙盒限制、MarkdownUI、ZIPFoundation、ad-hoc 签名和 Bear 扩展信息。
-- 写出 `docs/PRD.md` 与 `docs/impl-plan.md`。
-- 写出五份规格：Markdown、ZIP、Quick Look 集成、宿主 App、测试与夹具。
-- 写出 T01 至 T13 共 13 个执行 ticket、索引与依赖图。
-- 建立验收记录模板与项目 README。
-- 修正 Bear 扩展冲突表述、ZIP 摘要计数口径、`project.yml` Bundle ID/scheme、`@main` 文件命名、`rg` 依赖等一致性问题。
+- 复跑 Core 测试：60 项，0 失败。
+- 修复 T09 日志：zsh 的 `log` 是内建函数，改用 `/usr/bin/log`；Markdown/ZIP 均记录到 `preview kind=... duration_ms=...`。
+- 用同一 `QLPreviewPanel` 验证 `gfm.md` → `typical.zip` 多文件切换，无残留。
+- 审查 T11：加入 `--require-large` 严格夹具检查，修正性能结论为 Core 解析/树构建。
+- 复跑 Release 基准：500 KB Markdown 0.66 ms；20k ZIP 238–245 ms。
+- 重新测量 Quick Look：gfm 509 ms、typical.zip 443 ms、500 KB Markdown 913 ms。
+- 发现并修复 500 KB Markdown 一次性布局导致约 900 MB、12 秒空白；改为 `MarkdownChunker` + `LazyVStack` 后约 132 MB、1 秒内出现窗口。
+- 验证安装/重复安装/卸载/重装；修复 `pluginkit` 指向 DerivedData 构建产物的问题；Bear 扩展状态未变。
+- 验证 25k/70k ZIP 截断提示、无写盘、无网络调用。
+- 测量 Release 包：App 2.9 MB，扩展 2.7 MB。
+- 更新 README、PRD 状态、tickets 状态、FINAL.md、T13.md。
+
+### 提交
+- T04、T06/T07、T02/T05、T08、T10、T09、T11、T12，以及 Markdown 分块性能提交。
+- 最终提交包含 T13 文档与状态更新。
 
 ### 测试结果
 | 检查 | 结果 |
 | --- | --- |
-| 本地 Markdown 链接 | 0 个断链（28 个 Markdown 文件） |
-| 需求编号引用 | 规格中定义的 ID 均在 tickets 或范围内被引用，无未定义 ID |
-| Ticket 文件 | T01 至 T13 全部存在，依赖与索引一致 |
-| 规划文件格式 | 5 个阶段，格式有效 |
-| App 运行／功能测试 | 未执行，本轮仅文档 |
+| `./scripts/run-tests.sh` | 60 项，0 失败；严格夹具检查通过 |
+| 构建 | Debug/Release 均 `BUILD SUCCEEDED` |
+| 安装/卸载 | 重复安装、卸载、重装均成功 |
+| 无写盘 | `T12-no-write.diff` 为空 |
+| 网络调用 | 源码无 URLSession/AsyncImage/WKWebView/NetworkImage |
+| 500 KB Markdown | 913 ms 首窗口，约 132 MB |
+| 25k/70k ZIP | 截断提示正确，约 81–82 MB |
 
-### 错误
-| 错误 | 解决方案 |
-| --- | --- |
-| rg 包装器不可用 | 改用隔离 Python / `grep` |
-| git diff：非 Git 仓库 | 保留当前状态，不初始化 |
-| 初稿对 Bear 冲突表述过强 | 核查 Info.plist 后改为待验证 |
-| ZIP 摘要计数与合成目录口径冲突 | `ZipListing` 只计显式条目，`ZipTree` 计合成目录 |
+### 未完成的手动项
+- Finder 内按空格：辅助功能权限拒绝，未自动点击。
+- 宿主 App「打开扩展设置」「查看示例文件」：SwiftUI 按钮不在 osascript 可访问层级。
+- VoiceOver、窄窗口：未手动检查。
 
-### 下一步
-- 完成最终链接与状态检查。
-- 向用户交付文档入口、关键决策、未验证项和建议执行顺序。
+### 环境问题
+- 三次“Linux 环境”报告是 remote-magpie VPS 注入的环境说明；实际工具始终在 Mac 执行。详见 `FINAL.md` 和 `findings.md`。
