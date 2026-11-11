@@ -4,3 +4,10 @@ DerivedData/
 xcuserdata/
 .DS_Store
 Tapeek.xcodeproj/
+dist/
+
+# website
+website/node_modules/
+website/.cloudflare/
+website/draft/
+.claude/worktrees/
